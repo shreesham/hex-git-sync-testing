@@ -1,0 +1,137 @@
+schemaVersion: 3
+meta:
+  sourceVersionId: 2766694d-df9b-469c-a941-4c7c516f2002 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  description: ""
+  projectId: 2ae21424-29e6-4dd9-9f89-fcb589dd2bb2 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  title: 1980-1990 Top Grossing Movies Analysis
+  timezone: null
+  appTheme: SYS_PREF
+  codeLanguage: PYTHON
+  status: null
+  categories: []
+  castDecimalsDefault: true
+  logicQueryCacheTimeout: null
+  publishedQueryCacheTimeout: null
+projectAssets:
+  dataConnections: []
+  envVars: []
+  secrets: []
+sharedAssets:
+  secrets: []
+  vcsPackages: []
+  dataConnections:
+    - dataConnectionId: 32eac847-6bd4-48c7-ab1d-b02b49b7d94c # Demo Snowflake (snowflake)
+  externalFileIntegrations: []
+cells:
+  - cellType: SQL
+    cellId: d66387a0-db06-4c8d-ab24-f382891e6ef2 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Retrieve Highest Grossing Movies from 1980-1990
+    config:
+      source: |
+        SELECT
+            DEMOS.MOVIE_DATA.GENRE,
+            DEMOS.MOVIE_DATA.GROSS
+        FROM DEMO_DATA.DEMOS.MOVIE_DATA
+        WHERE DEMOS.MOVIE_DATA.YEAR BETWEEN 1980 AND 1990
+        ORDER BY DEMOS.MOVIE_DATA.GROSS DESC
+      dataFrameCell: false
+      dataConnectionId: 32eac847-6bd4-48c7-ab1d-b02b49b7d94c
+      resultVariableName: top_grossing_movies
+      useRichDisplay: false
+      sqlCellOutputType: PANDAS
+      useQueryMode: false
+      castDecimals: true
+      useNativeDates: true
+      outputFilteredResult: true
+      allowDuplicateColumns: false
+      tableDisplayConfig: null
+  - cellType: TEXT
+    cellId: 69a68932-7515-4e6e-9d75-62cd366480c3 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: p
+          children:
+            - text: Creating an analysis to answer "what is the most popular genre amongst the highest grossing movies between the years 1980-1990? "
+        - type: ol
+          children:
+            - type: li
+              children:
+                - type: p
+                  children:
+                    - text: First, we will write a SQL query to filter the MOVIE_DATA table for movies released between 1980 and 1990, and select the columns for GENRE and GROSS. We will order the result by GROSS in descending order. This will be done in the first SQL cell.
+            - type: li
+              children:
+                - type: p
+                  children:
+                    - text: Next, we will create a bar chart in the second cell. The x-axis will represent the GENRE and the y-axis will represent the sum of GROSS for each genre. This will help us visually identify the most popular genre amongst the highest grossing movies in the specified time period.
+  - cellType: CHARTV2
+    cellId: 772b0b25-ef4d-4736-a625-4cf801692b44 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: Visualize Most Popular Genre Amongst Highest Grossing Movies
+    config:
+      height: null
+      chartSpec:
+        type: layered
+        layers:
+          - id: 6c651328-520b-4a5a-8339-c46120061f5d
+            xAxis:
+              type: string
+              style:
+                grid:
+                  style: solid
+                ticks: {}
+                labels: {}
+              title: Total Gross
+              dataFrameColumn: GENRE
+            series:
+              - id: 0949920c-5f69-4a1f-be08-2f47b276ebef
+                type: bar
+                axis:
+                  type: number
+                  style:
+                    grid:
+                      style: solid
+                    ticks: {}
+                    labels: {}
+                  title: Genre
+                  aggregate: sum
+                dataFrameColumns:
+                  - GROSS
+                colorOrder: ascending
+                color:
+                  type: static
+                opacity:
+                  type: static
+                  value: 1
+                tooltip:
+                  type: auto
+                legendTitle: Genre vs Gross
+                barWidth: 1
+                orientation: horizontal
+                layout: grouped
+            dataFrame: top_grossing_movies
+        settings:
+          legend:
+            position: top
+          tooltip: true
+          selectionEnabled: false
+      chartSelection: {}
+      colorMappings: {}
+      resultVariable: filter_result
+      outputResult: false
+      displayTableConfig: null
+appLayout:
+  visibleMetadataFields:
+    - NAME
+    - DESCRIPTION
+    - AUTHOR
+    - LAST_EDITED
+    - LAST_RUN
+    - CATEGORIES
+    - STATUS
+    - TABLE_OF_CONTENTS
+  fullWidth: false
+  tabs:
+    - name: Tab 1
+      rows: []
+sharedFilters: []
