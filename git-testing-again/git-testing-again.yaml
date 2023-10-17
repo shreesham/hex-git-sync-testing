@@ -1,6 +1,6 @@
 schemaVersion: 3
 meta:
-  sourceVersionId: 5515bab1-4b12-404e-8e9a-2e5784eeee33 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: 0653d899-fdc0-49a6-bd41-16c5ede4edaa # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: 8363f58c-3bab-41ee-8256-df4191edda7d # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: git testing again
@@ -26,7 +26,7 @@ cells:
     cellId: 10614601-365b-4683-abad-7a688fd18d57 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
     cellLabel: null
     config:
-      source: print("hello world")
+      source: print("hello world, what's git")
 appLayout:
   visibleMetadataFields:
     - NAME
