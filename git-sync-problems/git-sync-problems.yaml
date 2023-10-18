@@ -1,6 +1,6 @@
 schemaVersion: 3
 meta:
-  sourceVersionId: 2370a5e2-0657-4040-a55f-0db27c2a3e3a # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: e66f8826-19ef-49f6-a92a-dbb3f3d8b0f7 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: I'm using this project to demonstrate issue/bugs/inconsistencies with Git sync to a repo that requires Pull requests
   projectId: 535106f7-e0de-440a-882b-67ff69c2f0ba # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: Git Sync problems
@@ -27,6 +27,11 @@ cells:
     cellLabel: null
     config:
       source: 'print("hello world, this is my app") '
+  - cellType: CODE
+    cellId: b0d3d1d2-96a6-417c-9581-1afeef954eab # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: print("i've published my version and adding a new cell to my app")
 appLayout:
   visibleMetadataFields:
     - NAME
@@ -49,6 +54,17 @@ appLayout:
                   hideOutput: false
                   type: CELL
                   cellId: 70afb178-94ab-4145-9641-1c33022f56d7
+                  sharedFilterId: null
+                  height: null
+                  showLabel: true
+        - columns:
+            - start: 0
+              end: 120
+              elements:
+                - showSource: false
+                  hideOutput: false
+                  type: CELL
+                  cellId: b0d3d1d2-96a6-417c-9581-1afeef954eab
                   sharedFilterId: null
                   height: null
                   showLabel: true
