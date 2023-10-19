@@ -1,6 +1,6 @@
 schemaVersion: 3
 meta:
-  sourceVersionId: e2090fdb-6923-4bd4-a011-6eb42f9b4ef9 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+  sourceVersionId: 1c26e72d-6976-485f-b1f6-76587f6e27ba # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
   description: ""
   projectId: 69378ace-03a6-46cd-b1ab-989a86ffb900 # DO NOT CHANGE - Unique ID of the project from which this file was generated
   title: testing git sync again 
@@ -27,6 +27,38 @@ cells:
     cellLabel: null
     config:
       source: print('hi2')
+  - cellType: TEXT
+    cellId: 1b86f759-9aa7-458c-8d4c-5aecc74af72d # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: paragraph
+          children:
+            - text: Export this file out first — most recent version of this on Git is 3 weeks old
+  - cellType: MARKDOWN
+    cellId: 3d63c800-e9c3-44ed-8495-09209847f2d2 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: |-
+        current git file meta info
+
+        meta:
+        - sourceVersionId: e2090fdb-6923-4bd4-a011-6eb42f9b4ef9 # DO NOT CHANGE - Hex uses this to match up project versions when reimporting the file
+        - description: ""
+        - projectId: 69378ace-03a6-46cd-b1ab-989a86ffb900 # DO NOT CHANGE - Unique ID of the project from which this file was generated
+  - cellType: TEXT
+    cellId: a8339211-2b53-4e63-bd49-4cee24c13376 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      richText:
+        - type: paragraph
+          children:
+            - text: "When I export this (the auto-saved version/changes made after sarah's saved) the new sourceVersionId is: 94e147b0-b3b1-42a1-b8cd-5cb76d5c7516"
+  - cellType: CODE
+    cellId: 65c31bbb-bf90-430d-9e92-6de32da33023 # DO NOT CHANGE - Hex uses this to match up cells when reimporting the file, and detect any changes to existing cells
+    cellLabel: null
+    config:
+      source: "#also just add this files current export yaml into the file and see what happens "
 appLayout:
   visibleMetadataFields:
     - NAME
@@ -40,5 +72,27 @@ appLayout:
   fullWidth: false
   tabs:
     - name: Tab 1
-      rows: []
+      rows:
+        - columns:
+            - start: 0
+              end: 120
+              elements:
+                - showSource: false
+                  hideOutput: false
+                  type: CELL
+                  cellId: 3d63c800-e9c3-44ed-8495-09209847f2d2
+                  sharedFilterId: null
+                  height: null
+                  showLabel: true
+        - columns:
+            - start: 0
+              end: 120
+              elements:
+                - showSource: false
+                  hideOutput: false
+                  type: CELL
+                  cellId: 65c31bbb-bf90-430d-9e92-6de32da33023
+                  sharedFilterId: null
+                  height: null
+                  showLabel: true
 sharedFilters: []
